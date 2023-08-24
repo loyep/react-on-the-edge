@@ -31,7 +31,7 @@ await build({
     ),
   ],
   outfile: OUT_FILE,
-  minify: true,
+  minify: false,
   format: 'esm',
   define: {
     // ensures React production build
