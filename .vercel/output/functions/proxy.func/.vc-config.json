@@ -1,5 +1,0 @@
-{
-  "runtime": "nodejs18.x",
-  "handler": "proxy/index.cjs",
-  "launcherType": "Nodejs"
-}
