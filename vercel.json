@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "name": "vercel-nest-serverless",
-  "builds": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "name": "nestjs-app",
+  "buildCommand": "pnpm build",
+  "functions": {
+    "api/vercel.ts": {
+      "runtime": "@vercel/node@2.15.10"
+    }
+  },
+  "rewrites": [
     {
-      "src": "dist/main.js",
-      "use": "@vercel/node"
+      "source": "/(.*)",
+      "destination": "/api/vercel.ts"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/main.js"
-    }
-  ]
+  "outputDirectory": "dist"
 }

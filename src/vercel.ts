@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
-import { AppModule } from '../src/app.module';
+import { AppModule } from './app.module';
 import express from 'express';
 import cors from 'cors';
 
